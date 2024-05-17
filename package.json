@@ -4,7 +4,8 @@
   "description": "Packages needed to make my cousin's Webpage Work",
   "main": "index.js",
   "scripts": {
-    "test": "build"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --mode production"
   },
   "repository": {
     "type": "git",
