@@ -16,5 +16,9 @@
   "bugs": {
     "url": "https://github.com/THEBLUEFLASH18/Jenny_Dentist/issues"
   },
-  "homepage": "https://github.com/THEBLUEFLASH18/Jenny_Dentist#readme"
+  "homepage": "https://github.com/THEBLUEFLASH18/Jenny_Dentist#readme",
+  "devDependencies": {
+    "webpack": "^5.91.0",
+    "webpack-cli": "^5.1.4"
+  }
 }
