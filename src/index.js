@@ -1,5 +1,6 @@
 import Atropos from 'atropos';
 import 'atropos/atropos.css'; 
+import './styles.css'
 
 // Initialize
 

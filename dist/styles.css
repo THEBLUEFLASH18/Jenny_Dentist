@@ -97,3 +97,50 @@
   transition-property: transform, opacity;
 }
 
+/* Main settings for the entire page */
+
+* {
+    box-sizing: border-box;
+}
+
+
+/* Atropos Initialization */
+.my-atropos {
+    width: 200px;
+    height: 400px;
+    color: white;
+}
+
+
+/* servicios box settings */ 
+
+.Servicios-Boxes {
+    display: flex;
+    justify-content: space-around;
+    margin: 10px auto;
+}
+
+
+.servicios {
+    background-color: #2089CA;
+    width: 200px;
+    height: 400px;
+    text-align: center;
+}
+
+.servicios img {
+    width: 180px;
+    height: 100px;
+    margin: 5px auto;
+}
+
+
+
+/* Spline settings */
+.spline-settings {
+    background-color: brown;
+    width: 100%;
+    height: 500px;
+}
+
+
