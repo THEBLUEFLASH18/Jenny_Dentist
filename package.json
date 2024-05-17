@@ -1,0 +1,19 @@
+{
+  "name": "jenny_dentist",
+  "version": "1.0.0",
+  "description": "Packages needed to make my cousin's Webpage Work",
+  "main": "index.js",
+  "scripts": {
+    "test": "build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/THEBLUEFLASH18/Jenny_Dentist.git"
+  },
+  "author": "Marcos Galdamez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/THEBLUEFLASH18/Jenny_Dentist/issues"
+  },
+  "homepage": "https://github.com/THEBLUEFLASH18/Jenny_Dentist#readme"
+}
