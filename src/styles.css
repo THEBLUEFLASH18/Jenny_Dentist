@@ -3,8 +3,15 @@
 }
 
 .my-atropos {
-    width: 100%;
-    height: 500px;
+    width: 200px;
+    height: 400px;
+    color: white;
+}
+
+.servicios {
+    background-color: #2089CA;
+    width: 200px;
+    height: 400px;
 }
 
 .spline-settings {
@@ -12,3 +19,4 @@
     width: 100%;
     height: 500px;
 }
+
