@@ -6,6 +6,8 @@
 
 body {
     background-color: #FFFFFF; /* White for the entire background to keep it fresh and airy */
+    font-family: 'Merriweather', serif;
+    font-weight: 400; /* Normal weight; use 700 for bold */
 }
 
 .nav-settings, footer {
@@ -81,6 +83,10 @@ nav section {
     transition: .5s, color .10s; /* transition effects for smooth color change */
     -webkit-transition: .5s, color .10s; /* for WebKit browsers */
     -moz-transition: .5s, color .10s; /* for Mozilla browsers */
+}
+
+nav section button a {
+    text-decoration: none;
 }
 
 .nav-buttons.grow:hover {
