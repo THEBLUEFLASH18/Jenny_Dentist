@@ -46,30 +46,36 @@
 
 /* servicios box settings */ 
 
+.servicios-bigbox {
+    justify-content: center;
+    align-items: center;
+}
+
 .Servicios-Boxes {
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 .Servicios-Boxes2 {
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 .servicios {
     background-color: #2089CA;
     text-align: center;
+    margin: 5px 0 5px 0;
 }
 
-.servicios img {
-    border: 2px solid white;
-    border-radius: 5px;
-}
 
 .servicios img {
     width: 180px;
     height: 100px;
     margin: 5px auto;
+    border: 2px solid white;
+    border-radius: 5px;
 }
 
 
