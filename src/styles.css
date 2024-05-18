@@ -2,7 +2,6 @@
 
 * {
     box-sizing: border-box;
-    border: 1px dashed red ;
 }
 
 
@@ -11,6 +10,7 @@
     width: 200px;
     height: 300px;
     color: white;
+    margin-top: 10px;
 }
 
 
@@ -46,29 +46,20 @@
 
 /* servicios box settings */ 
 
-.servicios-bigbox {
-    justify-content: center;
-    align-items: center;
-}
-
-.Servicios-Boxes {
+.Servicios-Boxes, .Servicios-Boxes2 {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
-}
-
-.Servicios-Boxes2 {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+    margin: 0 10px; /* Margin from left and right edges */
 }
 
 .servicios {
     background-color: #2089CA;
     text-align: center;
-    margin: 5px auto;
+    margin: 0 15px; /* Margin between items */
+    flex: 1 0 30%; /* Flex basis set to 30% so 3 items fit within the row */
 }
-
 
 .servicios img {
     width: 180px;
@@ -79,17 +70,20 @@
 }
 
 
+
 /* Footer Settings */
 
 footer {
     width: 100%;
     justify-content: center;
+    text-align: center;
 }
 
 ul {
     display: flex;
-    justify-content: center;
+    justify-content:center;
     list-style: none;
+    align-items: center;
 } 
 
 ul li a {
