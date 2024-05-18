@@ -107,31 +107,31 @@
 /* Atropos Initialization */
 .my-atropos {
     width: 200px;
-    height: 400px;
+    height: 300px;
     color: white;
+    margin-top: 10px;
 }
 
 
-/* servicios box settings */ 
 
-.Servicios-Boxes {
+
+/* Nav Settings */ 
+
+.nav-settings {
     display: flex;
-    justify-content: space-around;
-    margin: 10px auto;
+    justify-content: space-between;
+    align-items: center;
 }
 
-
-.servicios {
-    background-color: #2089CA;
-    width: 200px;
-    height: 400px;
-    text-align: center;
+.logo_h1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 5px 5px;
 }
 
-.servicios img {
-    width: 180px;
-    height: 100px;
-    margin: 5px auto;
+.logo_h1 h1 {
+    margin: auto 5px;
 }
 
 
@@ -143,4 +143,49 @@
     height: 500px;
 }
 
+/* servicios box settings */ 
+
+.Servicios-Boxes, .Servicios-Boxes2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 10px; /* Margin from left and right edges */
+}
+
+.servicios {
+    background-color: #2089CA;
+    text-align: center;
+    margin: 0 15px; /* Margin between items */
+    flex: 1 0 30%; /* Flex basis set to 30% so 3 items fit within the row */
+}
+
+.servicios img {
+    width: 180px;
+    height: 100px;
+    margin: 5px auto;
+    border: 2px solid white;
+    border-radius: 5px;
+}
+
+
+
+/* Footer Settings */
+
+footer {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+}
+
+ul {
+    display: flex;
+    justify-content:center;
+    list-style: none;
+    align-items: center;
+} 
+
+ul li a {
+    text-decoration: none;
+}
 
