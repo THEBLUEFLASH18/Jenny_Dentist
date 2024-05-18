@@ -8,7 +8,7 @@
 /* Atropos Initialization */
 .my-atropos {
     width: 200px;
-    height: 400px;
+    height: 300px;
     color: white;
 }
 
@@ -21,12 +21,20 @@
     margin: 10px auto;
 }
 
+.Servicios-Boxes2 {
+    display: flex;
+    justify-content: space-around;
+    margin: 10px auto;
+}
 
 .servicios {
     background-color: #2089CA;
-    width: 200px;
-    height: 400px;
     text-align: center;
+}
+
+.servicios img {
+    border: 2px solid white;
+    border-radius: 5px;
 }
 
 .servicios img {
@@ -43,6 +51,17 @@
     align-items: center;
 }
 
+.logo_h1 {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 5px 5px;
+}
+
+.logo_h1 h1 {
+    margin: auto 5px;
+}
+
 
 
 /* Spline settings */
@@ -50,5 +69,18 @@
     background-color: brown;
     width: 100%;
     height: 500px;
+}
+
+
+/* Footer Settings */
+
+
+ul {
+    display: flex;
+    justify-content: space-between;
+} 
+
+ul li a {
+    text-decoration: none;
 }
 
