@@ -53,20 +53,20 @@
 
 .Servicios-Boxes {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
 }
 
 .Servicios-Boxes2 {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
 }
 
 .servicios {
     background-color: #2089CA;
     text-align: center;
-    margin: 5px 0 5px 0;
+    margin: 5px auto;
 }
 
 
