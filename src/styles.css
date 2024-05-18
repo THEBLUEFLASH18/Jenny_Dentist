@@ -4,6 +4,38 @@
     box-sizing: border-box;
 }
 
+body {
+    background-color: #FFFFFF; /* White for the entire background to keep it fresh and airy */
+}
+
+.nav-settings, footer {
+    background-color: #2188CA;
+    color: #FFFFFF;
+}
+
+ .nav-buttons a {
+    color: #2188CA;
+}
+.logo_h1 h1 {
+    color: white;
+}
+
+.nav-buttons {
+    background-color: #FFFFFF;
+    border: 1px solid #2188CA; /* Adding a border to define button shapes subtly */
+}
+
+.spline-settings {
+    background-color: #FFFFFF;
+    color: #2188CA;
+}
+.Servicios-Boxes, .Servicios-Boxes2 {
+    color: white;
+}
+
+
+
+
 
 /* Atropos Initialization */
 .my-atropos {
@@ -11,6 +43,7 @@
     height: 300px;
     color: white;
     margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 
@@ -22,6 +55,12 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    height: 100px;
+}
+
+
+nav section {
+    margin: 0 5px;
 }
 
 .logo_h1 {
@@ -35,13 +74,28 @@
     margin: auto 5px;
 }
 
+.nav-buttons {
+    background-color: #FFFFFF; /* existing styling */
+    border: 1px solid #2188CA; /* existing styling */
+    color: #2188CA; /* existing styling */
+    transition: .5s, color .10s; /* transition effects for smooth color change */
+    -webkit-transition: .5s, color .10s; /* for WebKit browsers */
+    -moz-transition: .5s, color .10s; /* for Mozilla browsers */
+}
+
+.nav-buttons.grow:hover {
+    transform: scale3d(1.5, 1.5, 0.3); /* scale the button on hover */
+    -webkit-transform: scale3d(1.5, 1.5, 0.3); /* for WebKit browsers */
+    -moz-transform: scale3d(1.5, 1.5, 0.3); /* for Mozilla browsers */
+}
+
+
 
 
 /* Spline settings */
 .spline-settings {
-    background-color: white;
     width: 100%;
-    height: 500px;
+    height: 600px;
 }
 
 /* servicios box settings */ 
@@ -74,9 +128,12 @@
 /* Footer Settings */
 
 footer {
+    display: flex;
     width: 100%;
     justify-content: center;
     text-align: center;
+    height: 200px;
+    align-items: center;
 }
 
 ul {
@@ -88,4 +145,6 @@ ul {
 
 ul li a {
     text-decoration: none;
+    color: #FFFFFF;
+    margin: 0 10px;
 }
