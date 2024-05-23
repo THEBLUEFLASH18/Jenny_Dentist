@@ -45,13 +45,16 @@ footer {
 /* Atropos Initialization */
 .my-atropos {
     width: 200px;
-    height: 300px;
+    height: 400px;
     color: #2089CA;
     margin-top: 10px;
     margin-bottom: 10px;
 }
 
-
+p {
+    margin-top: 5px;
+    font-size: .8em;
+}
 
 
 /* Nav Settings */ 
@@ -68,6 +71,7 @@ footer {
 
 nav section {
     margin: 0 5px;
+    padding: 5px;
 }
 
 .logo_h1 {
@@ -93,6 +97,9 @@ nav section {
     transition: .5s, color .10s; /* transition effects for smooth color change */
     -webkit-transition: .5s, color .10s; /* for WebKit browsers */
     -moz-transition: .5s, color .10s; /* for Mozilla browsers */
+    margin: 0 7px;
+    border-radius: 5px;
+    font-size: 15px;
 }
 
 nav section button a {
@@ -129,6 +136,7 @@ nav section button a {
     text-align: center;
     margin: 0 15px; /* Margin between items */
     flex: 1 0 30%; /* Flex basis set to 30% so 3 items fit within the row */
+    padding: 5px;
 }
 
 .servicios img {
