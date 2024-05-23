@@ -6,12 +6,12 @@
 }
 
 body {
-    background-color: #FFFFFF; /* White for the entire background to keep it fresh and airy */
+    background-color: #2089CA; /* White for the entire background to keep it fresh and airy */
     font-family: 'Merriweather', serif;
     font-weight: 400; /* Normal weight; use 700 for bold */
 }
 
-.nav-settings, footer {
+.nav-settings {
     background-color: #2188CA;
     color: #FFFFFF;
 }
@@ -36,7 +36,9 @@ body {
     color: white;
 }
 
-
+footer {
+    background-color: white;
+}
 
 
 
@@ -44,7 +46,7 @@ body {
 .my-atropos {
     width: 200px;
     height: 300px;
-    color: white;
+    color: #2089CA;
     margin-top: 10px;
     margin-bottom: 10px;
 }
@@ -123,7 +125,7 @@ nav section button a {
 }
 
 .servicios {
-    background-color: #2089CA;
+    background-color: white;
     text-align: center;
     margin: 0 15px; /* Margin between items */
     flex: 1 0 30%; /* Flex basis set to 30% so 3 items fit within the row */
@@ -133,7 +135,7 @@ nav section button a {
     width: 180px;
     height: 100px;
     margin: 5px auto;
-    border: 2px solid white;
+    border: 2px solid #2089CA;
     border-radius: 5px;
 }
 
@@ -159,6 +161,6 @@ ul {
 
 ul li a {
     text-decoration: none;
-    color: #FFFFFF;
+    color: #2188CA;
     margin: 0 10px;
 }
