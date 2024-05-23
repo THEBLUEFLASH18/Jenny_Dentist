@@ -17,3 +17,11 @@ document.querySelectorAll('.my-atropos').forEach(atroposElement => {
 });
 
 
+document.addEventListener('DOMContentLoaded', function() {
+  const logoImage = document.getElementById('logo');
+  if (logoImage) {
+    logoImage.src = jennyLogo;
+  } else {
+    console.error('Logo image element not found');
+  }
+});
