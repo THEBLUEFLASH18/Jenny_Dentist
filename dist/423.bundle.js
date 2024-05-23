@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkjenny_dentist=self.webpackChunkjenny_dentist||[]).push([[423],{423:(e,s,n)=>{e.exports=n.p+"images/65fd8e9f94fa770874d0.JPG"}}]);

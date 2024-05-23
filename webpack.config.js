@@ -1,6 +1,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin'); // Import the plugin
 
 module.exports = {
   entry: './src/index.js',
@@ -35,6 +36,7 @@ module.exports = {
     ]
   },
   plugins: [
+    new CleanWebpackPlugin(), // Use the plugin to clean/dist between builds
     new HtmlWebpackPlugin({
       template: './src/index.html',
       filename: 'index.html'
