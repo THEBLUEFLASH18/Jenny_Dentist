@@ -1,12 +1,14 @@
 /* Main settings for the entire page */
 
+/* Main settings for the entire page */
+
 * {
     box-sizing: border-box;
     margin: 0;
 }
 
 body {
-    background-color: #2089CA; /* White for the entire background to keep it fresh and airy */
+    background-color: #2089CA;
     font-family: 'Merriweather', serif;
     font-weight: 400; /* Normal weight; use 700 for bold */
 }
@@ -16,16 +18,91 @@ body {
     color: #FFFFFF;
 }
 
- .nav-buttons a {
-    color: #2188CA;
-}
-.logo_h1 h1 {
-    color: white;
+.nav-buttons {
+    --border-color: linear-gradient(-45deg, #FFFFFF, #2188CA, #FFFFFF);
+    --border-width: 0.125em;
+    --curve-size: 0.5em;
+    --blur: 30px;
+    --bg: linear-gradient(145deg, #2188CA, #FFFFFF, #2188CA); /* Gradient background */
+    --color: #0E334A; /* Dark color for text for contrast */
+    color: var(--color);
+    cursor: pointer;
+    position: relative;
+    isolation: isolate;
+    display: inline-grid;
+    place-content: center;
+    padding: 0.5em 1.5em;
+    font-size: 17px;
+    border: 0;
+    text-transform: uppercase;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.6);
+    clip-path: polygon(
+        0% var(--curve-size), 
+        var(--curve-size) 0, 
+        100% 0, 
+        100% calc(100% - var(--curve-size)), 
+        calc(100% - var(--curve-size)) 100%, 
+        0 100%
+    );
+    transition: color 250ms;
 }
 
-.nav-buttons {
-    background-color: #FFFFFF;
-    border: 1px solid #2188CA; /* Adding a border to define button shapes subtly */
+.nav-buttons::after,
+.nav-buttons::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+}
+
+.nav-buttons::before {
+    background: var(--border-color);
+    background-size: 300% 300%;
+    animation: move-bg7234 5s ease infinite;
+    z-index: -2;
+}
+
+@keyframes move-bg7234 {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.nav-buttons::after {
+    background: var(--bg);
+    z-index: -1;
+    clip-path: polygon(
+        var(--border-width) calc(var(--curve-size) + var(--border-width) * 0.5),
+        calc(var(--curve-size) + var(--border-width) * 0.5) var(--border-width),
+        calc(100% - var(--border-width)) var(--border-width),
+        calc(100% - var(--border-width)) calc(100% - (var(--curve-size) + var(--border-width) * 0.5)),
+        calc(100% - (var(--curve-size) + var(--border-width) * 0.5)) calc(100% - var(--border-width)),
+        var(--border-width) calc(100% - var(--border-width))
+    );
+    transition: clip-path 500ms;
+}
+
+.nav-buttons:where(:hover, :focus) {
+    color: #ffffff; /* White color on hover/focus for better visibility */
+}
+
+nav section button a {
+    text-decoration: none;
+    color: inherit; /* Ensures anchor tags inside buttons inherit button text color */
+}
+
+.nav-buttons.grow:hover {
+    transform: scale(1.05); /* subtle growth effect on hover */
+}
+
+
+.logo_h1 h1 {
+    color: white;
 }
 
 .spline-settings {
@@ -154,14 +231,11 @@ nav section button a {
 footer {
     display: flex;
     width: 100%;
-    justify-content: center;
-    text-align: center;
     height: 200px;
     align-items: center;
 }
 
 ul {
-    display: flex;
     justify-content:center;
     list-style: none;
     align-items: center;
