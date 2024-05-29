@@ -428,7 +428,7 @@ ul li {
 }
 
 .instagram {
-    display: inline-block;
+    display: flex;
     transition: all 0.2s ease-in;
     position: relative;
     overflow: hidden;
@@ -440,14 +440,12 @@ ul li {
     background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
     border: 1px solid transparent; /* Transparent border blends with the background */
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    justify-content: center;
+    align-items: center;
   }
-  
-  .instagram > svg {
-    height: 30px;
-    position: absolute;
-    padding: 0px 5px;
-    margin-top: -4px;
-    fill: #FFFFFF; /* White SVG for contrast */
+
+  .instagram i {
+    margin-left: 5px;
   }
   
   .instagram:active {
