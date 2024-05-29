@@ -19,77 +19,87 @@ body {
 }
 
 .nav-buttons {
-    --border-color: linear-gradient(-45deg, #FFFFFF, #2188CA, #FFFFFF);
-    --border-width: 0.125em;
-    --curve-size: 0.5em;
-    --blur: 30px;
-    --bg: linear-gradient(145deg, #2188CA, #FFFFFF, #2188CA); /* Gradient background */
-    --color: #0E334A; /* Dark color for text for contrast */
-    color: var(--color);
-    cursor: pointer;
+    display: inline-block;
+    transition: all 0.2s ease-in;
     position: relative;
-    isolation: isolate;
-    display: inline-grid;
-    place-content: center;
-    padding: 0.5em 1.5em;
-    font-size: 17px;
-    border: 0;
-    text-transform: uppercase;
-    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.6);
-    clip-path: polygon(
-        0% var(--curve-size), 
-        var(--curve-size) 0, 
-        100% 0, 
-        100% calc(100% - var(--curve-size)), 
-        calc(100% - var(--curve-size)) 100%, 
-        0 100%
-    );
-    transition: color 250ms;
+    overflow: hidden;
+    z-index: 1;
+    color: #090909; /* Adjusted text color */
+    padding: 5px 5px;
+    font-size: 24px;
+    border-radius: 0.5em;
+    background: #2188CA; /* Primary color for nav-buttons */
+    border: 1px solid #2188CA; /* Solid border with the same color as background */
+    box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.3), /* Darker shadow for depth */
+               -6px -6px 12px #2188CA; /* Lighter shadow for raised effect */
 }
 
-.nav-buttons::after,
-.nav-buttons::before {
+.nav-buttons > svg {
+    height: 30px;
+    position: absolute;
+    padding: 0px 5px;
+    margin-top: -4px;
+    fill: #ffffff; /* White fill for SVG icons */
+}
+
+.nav-buttons:active {
+    color: #CCC;
+    box-shadow: inset 4px 4px 12px rgba(0, 0, 0, 0.3), /* Inner shadow for pressed effect */
+               inset -4px -4px 12px #2188CA; /* Lighter inner shadow for consistency */
+}
+
+.nav-buttons:before {
     content: "";
     position: absolute;
-    inset: 0;
-}
-
-.nav-buttons::before {
-    background: var(--border-color);
-    background-size: 300% 300%;
-    animation: move-bg7234 5s ease infinite;
-    z-index: -2;
-}
-
-@keyframes move-bg7234 {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
-.nav-buttons::after {
-    background: var(--bg);
+    left: 50%;
+    transform: translateX(-50%) scaleY(1) scaleX(1.25);
+    top: 100%;
+    width: 140%;
+    height: 180%;
+    background-color: rgba(0, 0, 0, 0.05); /* Subtle overlay for a soft touch */
+    border-radius: 50%;
+    display: block;
+    transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
     z-index: -1;
-    clip-path: polygon(
-        var(--border-width) calc(var(--curve-size) + var(--border-width) * 0.5),
-        calc(var(--curve-size) + var(--border-width) * 0.5) var(--border-width),
-        calc(100% - var(--border-width)) var(--border-width),
-        calc(100% - var(--border-width)) calc(100% - (var(--curve-size) + var(--border-width) * 0.5)),
-        calc(100% - (var(--curve-size) + var(--border-width) * 0.5)) calc(100% - var(--border-width)),
-        var(--border-width) calc(100% - var(--border-width))
-    );
-    transition: clip-path 500ms;
 }
 
-.nav-buttons:where(:hover, :focus) {
-    color: #ffffff; /* White color on hover/focus for better visibility */
+.nav-buttons:after {
+    content: "";
+    position: absolute;
+    left: 55%;
+    transform: translateX(-50%) scaleY(1) scaleX(1.45);
+    top: 180%;
+    width: 160%;
+    height: 190%;
+    background-color: #2188CA; /* Background color for the animated effect */
+    border-radius: 50%;
+    display: block;
+    transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
+    z-index: -1;
 }
+
+.nav-buttons:hover {
+    color: #2188CA;
+    border: 1px solid #2188CA; /* Highlight border on hover */
+    background: #2188CA; /* Lighter background on hover for visibility */
+}
+
+.nav-buttons:hover > svg {
+    fill: #2188CA; /* Revert SVG fill to original color on hover */
+}
+
+.nav-buttons:hover:before {
+    top: -35%;
+    background-color: #ffffff; /* Hover effect for the before pseudo-element */
+    transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
+}
+
+.nav-buttons:hover:after {
+    top: -45%;
+    background-color: #ffffff; /* Hover effect for the after pseudo-element */
+    transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
+}
+
 
 nav section button a {
     text-decoration: none;
@@ -246,7 +256,6 @@ footer {
 ul {
     display: flex;
     list-style: none;
-    border: 1px solid red;
     justify-content: center;
     width: 100%;
 } 
